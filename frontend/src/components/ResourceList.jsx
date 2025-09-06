@@ -91,7 +91,7 @@ const ResourceList = ({ resources = [], onRemove }) => {
           size="small"
           onClick={() => handlePreview(res)}
           startIcon={<PreviewIcon />}
-          fullWidth // ✅ makes both buttons same width
+          fullWidth
         >
           Preview
         </Button>
