@@ -284,8 +284,6 @@ export default function UploadForm({ onSuccess }) {   // <-- accept onSuccess
       <Typography variant="caption" display="block" mt={1} color="text.secondary">
         Allowed file types: PDF, TXT, MD, DOC, DOCX.
         <br />
-        Text/Word files will extract text (searchable + preview).
-        PDFs/others will store file separately and show preview/download in dialog.
       </Typography>
     </Paper>
   );
