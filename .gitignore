@@ -1,0 +1,6 @@
+.idea/
+.gitattributes
+
+
+# Node and React
+frontend/node_modules/

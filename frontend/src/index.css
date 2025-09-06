@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F8FAFC;
+  color: #1E1F36;
+}
+
+/* Buttons */
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg px-4 py-2 transition;
+}
+
+/* Gradient Button */
+.btn-gradient {
+  background: linear-gradient(90deg, #0066FF 0%, #00C2FF 100%);
+  color: white;             /* Ensure text is visible */
+  font-weight: 600;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: opacity 0.2s ease-in-out;
+  text-transform: none;     /* Optional: avoid uppercase */
+}
+.btn-gradient:hover {
+  opacity: 0.9;
+}
+
+/* Card Styling */
+.card {
+  @apply bg-white shadow-lg rounded-2xl border border-gray-100 p-4;
+}
+
+/* Input Fields */
+.input-field {
+  @apply border border-gray-300 rounded-lg px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+/* Resource Card Flex */
+.resource-actions {
+  @apply flex justify-between mt-2;
+}
+
+/* Chips */
+.chip {
+  @apply bg-gray-100 text-gray-700 text-sm rounded-full px-2 py-1;
+}
+
+/* Dialog */
+.dialog-content {
+  @apply p-4;
+}
