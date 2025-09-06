@@ -2,10 +2,10 @@ import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
   palette: {
-    primary: { main: '#0066FF' },       // blue accent like Inkwire
-    secondary: { main: '#00C2FF' },     // gradient secondary
-    background: { default: '#F8FAFC' }, // light gray background
-    text: { primary: '#1E1F36', secondary: '#6B7280' } // dark/gray text
+    primary: { main: '#0066FF' },
+    secondary: { main: '#00C2FF' },
+    background: { default: '#F8FAFC' },
+    text: { primary: '#1E1F36', secondary: '#6B7280' }
   },
   typography: {
     fontFamily: '"Inter", "Roboto", "Helvetica", "Arial", sans-serif',

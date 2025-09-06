@@ -12,7 +12,7 @@ import {
 import AddIcon from "@mui/icons-material/Add";
 import { createResource } from "../models/resourceModel";
 
-export default function UploadForm({ onSuccess }) {   // <-- accept onSuccess
+export default function UploadForm({ onSuccess }) {
   const [file, setFile] = useState(null);
   const [tagsInput, setTagsInput] = useState("");
   const [tags, setTags] = useState([]);
@@ -66,7 +66,7 @@ export default function UploadForm({ onSuccess }) {   // <-- accept onSuccess
     const t = tagsInput.trim();
     if (!t) return;
     const newTags = t.split(",").map((x) => x.trim()).filter(Boolean);
-    setTags((prev) => Array.from(new Set([...prev, ...newTags]))); // unique
+    setTags((prev) => Array.from(new Set([...prev, ...newTags])));
     setTagsInput("");
     setErrors((prev) => ({ ...prev, tags: "" }));
   };

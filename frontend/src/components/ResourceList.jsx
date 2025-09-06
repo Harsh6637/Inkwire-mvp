@@ -25,34 +25,73 @@ const ResourceList = ({ resources = [], onRemove }) => {
         backgroundColor: "#FAFAFA",
         display: "flex",
         justifyContent: "space-between",
-        alignItems: "center",
+        alignItems: "stretch",
         gap: 2,
-        flexWrap: "wrap",
       }}
     >
-      <Box sx={{ display: "flex", flexDirection: "column", gap: 0.5, flex: 1 }}>
-        <Typography variant="subtitle1" fontWeight="bold">
+      {/* Left side: File details */}
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          gap: 0.5,
+          flex: 1,
+          minWidth: 0,
+        }}
+      >
+        <Typography
+          variant="subtitle1"
+          fontWeight="bold"
+          sx={{
+            wordBreak: "break-word",
+            whiteSpace: "normal",
+          }}
+        >
           {res.name}
         </Typography>
 
         {(res.tags || []).length > 0 && (
-          <Box sx={{ display: "flex", alignItems: "center", flexWrap: "wrap", gap: 1 }}>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              flexWrap: "wrap",
+              gap: 1,
+            }}
+          >
             <Typography variant="body2" sx={{ fontWeight: "bold" }}>
               Tags:
             </Typography>
             {res.tags.map((t) => (
-              <Chip key={t} label={t} size="small" sx={{ backgroundColor: "#E5E7EB", color: "#1E1F36" }} />
+              <Chip
+                key={t}
+                label={t}
+                size="small"
+                sx={{ backgroundColor: "#E5E7EB", color: "#1E1F36" }}
+              />
             ))}
           </Box>
         )}
       </Box>
 
-      <Box className="doc-actions">
+      {/* Right side: Actions (stacked vertically) */}
+      <Box
+        className="doc-actions"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "flex-end",
+          flexShrink: 0,
+          gap: 1,
+        }}
+      >
         <Button
           variant="outlined"
           size="small"
           onClick={() => handlePreview(res)}
           startIcon={<PreviewIcon />}
+          fullWidth // ✅ makes both buttons same width
         >
           Preview
         </Button>
@@ -61,8 +100,9 @@ const ResourceList = ({ resources = [], onRemove }) => {
           variant="outlined"
           size="small"
           color="error"
-          onClick={() => onRemove(res)} // ✅ Only trigger parent confirmation
+          onClick={() => onRemove(res)}
           startIcon={<DeleteIcon />}
+          fullWidth
         >
           Remove
         </Button>

@@ -53,8 +53,6 @@ const DashboardPage = () => {
       );
       setResources(updatedResources);
       sessionStorage.setItem("resources", JSON.stringify(updatedResources));
-
-      // Also remove from AI message docs
       setMessages((prev) =>
         prev.map((m) =>
           m.type === "docs"
@@ -197,7 +195,7 @@ const DashboardPage = () => {
                             <Button
                               size="small"
                               color="error"
-                              onClick={() => handleRemoveClick(doc)} // same confirmation dialog
+                              onClick={() => handleRemoveClick(doc)}
                             >
                               Remove
                             </Button>
@@ -289,7 +287,7 @@ const DashboardPage = () => {
         />
       )}
 
-      {/* Remove Confirmation - Only render if resource is selected */}
+      {/* Remove Confirmation */}
       {resourceToRemove && (
         <Dialog
           open={removeDialogOpen}

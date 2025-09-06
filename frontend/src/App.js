@@ -12,7 +12,6 @@ function App() {
   // If a user is already stored in localStorage, bypass login
   useEffect(() => {
     if (checkExistingLogin()) navigate('/dashboard');
-    // eslint-disable-next-line
   }, []);
 
   return (

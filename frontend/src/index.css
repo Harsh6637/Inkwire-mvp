@@ -16,12 +16,12 @@ body {
 /* Gradient Button */
 .btn-gradient {
   background: linear-gradient(90deg, #0066FF 0%, #00C2FF 100%);
-  color: white;             /* Ensure text is visible */
+  color: white;
   font-weight: 600;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
   transition: opacity 0.2s ease-in-out;
-  text-transform: none;     /* Optional: avoid uppercase */
+  text-transform: none;
 }
 .btn-gradient:hover {
   opacity: 0.9;

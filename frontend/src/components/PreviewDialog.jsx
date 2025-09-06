@@ -76,7 +76,6 @@ const PreviewDialog = ({ open, onClose, name, fileType, content, rawData }) => {
         },
       }}
     >
-      {/* Title with bottom border */}
       <DialogTitle
         sx={{
           p: 2,
@@ -88,8 +87,6 @@ const PreviewDialog = ({ open, onClose, name, fileType, content, rawData }) => {
         }}
       >
         <Typography variant="h6">{name}</Typography>
-
-        {/* Elegant blue CLOSE button */}
         <Button
           onClick={onClose}
           sx={{
@@ -117,7 +114,7 @@ const PreviewDialog = ({ open, onClose, name, fileType, content, rawData }) => {
         sx={{
           height: "calc(100% - 64px)",
           overflowY: "auto",
-          pt: 2, // space from title
+          pt: 2,
         }}
       >
         {previewContent}
